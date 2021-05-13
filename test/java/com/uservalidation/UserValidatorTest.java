@@ -36,5 +36,13 @@ public class UserValidatorTest {
 
     }
 
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTrue()
+    {
+        UserValidatior validatior = new UserValidatior();
+        boolean result = validatior.validatePassword("Raman@12");
+        Assertions.assertTrue(result);
+    }
+
 
 }
