@@ -12,5 +12,11 @@ public class UserValidatior {
         Pattern pattern = Pattern.compile(FIRST_NAME_PATTERN);
         return pattern.matcher(fname).matches();
     }
+    private static final String LAST_NAME_PATTERN = "^[A-Z]{1}[a-z]{3,}$";
+    public boolean validateLastName(String lname)
+    {
+        Pattern pattern = Pattern.compile(LAST_NAME_PATTERN);
+        return pattern.matcher(lname).matches();
+    }
 
 }
