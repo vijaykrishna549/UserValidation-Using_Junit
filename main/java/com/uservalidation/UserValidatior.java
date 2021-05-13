@@ -33,7 +33,12 @@ public class UserValidatior {
         return  pattern.matcher(phone).matches();
     }
 
-
+    private static final String PASSWORD_PATTERN = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#]*)[a-zA-Z0-9@!#*]{8,}";
+    public boolean validatePassword(String pass)
+    {
+        Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
+        return  pattern.matcher(pass).matches();
+    }
 
 
     }
