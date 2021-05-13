@@ -18,5 +18,11 @@ public class UserValidatior {
         Pattern pattern = Pattern.compile(LAST_NAME_PATTERN);
         return pattern.matcher(lname).matches();
     }
+    private static final String EMAIL_PATTERN = "^[a-z]{3}[.][xyz]*[@][a-z]{2}[.][co]{2}[.][in]*$";
+    public boolean validateEmail(String email)
+    {
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        return pattern.matcher(email).matches();
+    }
 
 }
