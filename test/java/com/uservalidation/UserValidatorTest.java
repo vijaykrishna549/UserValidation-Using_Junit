@@ -19,12 +19,22 @@ public class UserValidatorTest {
         Assertions.assertTrue(result);
     }
     @Test
-   public void givenEmail_WhenProper_ShouldReturn_true()
+   public void givenEmail_WhenProper_ShouldReturnTrue()
     {
         UserValidatior validatior = new UserValidatior();
 
         boolean result = validatior.validateEmail("abc.xyz@bl.co.in");
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(result);
 
     }
+    @Test
+    public void givenPhoneNumber_WhenProper_ShouldReturnTrue()
+    {
+        UserValidatior validatior = new UserValidatior();
+        boolean result = validatior.validatePhone("91 8504449225");
+        Assertions.assertTrue(result);
+
+    }
+
+
 }
